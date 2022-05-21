@@ -20,12 +20,12 @@ function HeroCarousel(){
 
 
         >
-            <div className="h-96 object-contain">
-                <img className="object-fill" src="img/coffee.jpg" />
+            <div className="h-[420px] ">
+                <img className="object-contain" src="img/coffee.jpg" />
             </div>
 
-            <div className="h-auto">
-                <img className=" object-fill" src="img/Burger2.jpg" />
+            <div className="h-[900px] ">
+                <img className=" object-contain" src="img/Burger2.jpg" />
 
             </div>
 

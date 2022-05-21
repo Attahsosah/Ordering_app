@@ -1,11 +1,15 @@
 import Image from "next/image";
 import { ShoppingCartIcon } from "@heroicons/react/outline";
+import { ChangeContext } from "./context/ColorContext";
+import { useContext } from "react";
 
 function Navbar() {
+
+    const [clicked, setClicked] = useContext(ChangeContext)
     return (
 
         
-        <div className="flex sticky top-0  justify-between   bg-black h-28 z-50" >
+        <div className={clicked ? "flex sticky top-0  justify-between   bg-blue-700 bg-opacity-70 h-32 z-50": "flex sticky top-0  justify-between   bg-yellow-700 bg-opacity-20 h-32 z-50"} >
             
             
             <div className="flex  p-10 justify-content items-center  justify-between  space-x-4">
