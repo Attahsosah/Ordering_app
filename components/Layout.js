@@ -3,6 +3,7 @@ import Navbar from "./Navbar"
 import HeroCarousel from "./HeroCarousel"
 import Items from "./Items";
 import Menu from "./Menu";
+import NewMenu from "./NewMenu";
 function Layout({ children }) {
     return (
         <div className="bg-black">
@@ -10,7 +11,8 @@ function Layout({ children }) {
                 <Navbar />
                 <HeroCarousel />
                 <Items />
-                <Menu />
+                
+                <NewMenu />
                 
                 
 

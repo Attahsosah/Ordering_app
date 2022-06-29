@@ -1,15 +1,43 @@
 import Image from "next/image";
 import { ShoppingCartIcon } from "@heroicons/react/outline";
 import { ChangeContext } from "./context/ColorContext";
-import { useContext } from "react";
+import { useContext, useState, useEffect } from "react";
+import Link from 'next/link';
+
 
 function Navbar() {
 
+
     const [clicked, setClicked] = useContext(ChangeContext)
+    const [scrolled, setScrolled] = useState(false)
+    const cart = () => {
+        router.push({
+
+            pathname: "/cart",
+            
+        });
+    }
+
+
+    const scrollChange = () => {
+        if (window.scrollY > 60){
+            setScrolled(true)
+        }
+        else {
+            setScrolled(false)
+        }
+    }
+    useEffect(()=>{
+        window.addEventListener("scroll", scrollChange)
+
+        return () => {
+            window.removeEventListener("scroll", scrollChange)
+        }
+    })
     return (
 
         
-        <div className={clicked ? "flex sticky top-0  justify-between   bg-blue-700 bg-opacity-70 h-32 z-50": "flex sticky top-0  justify-between   bg-yellow-700 bg-opacity-20 h-32 z-50"} >
+        <div className={scrolled ? "flex sticky top-0  justify-between   bg-black bg-opacity-70  px-10  transition-all transform duration-500 ease-in-out z-50": "flex sticky top-0  justify-between   bg-yellow-700 bg-opacity-20 h-32 z-50"} >
             
             
             <div className="flex  p-10 justify-content items-center  justify-between  space-x-4">
@@ -70,8 +98,9 @@ function Navbar() {
 
             </div>
             <div className="flex items-center p-8 z-50">
-            <ShoppingCartIcon className="cursor-pointer md: pl-11 text-white text-sm h-7 "/>
-
+            <Link  href="/cart">
+                <ShoppingCartIcon   className="cursor-pointer md: pl-11 text-white text-sm h-7 "/>
+            </Link>
 
             </div>
         </div>

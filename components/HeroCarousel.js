@@ -5,10 +5,10 @@ import { Carousel } from 'react-responsive-carousel';
 function HeroCarousel(){
     return(
         <Carousel
-        autoplay={true}
+        autoPlay={true}
         autoFocus={true}
         emulateTouch={true}
-        transitionTime={3}
+        transitionTime={3000}
         showThumbs={false}
         showStatus={false}
         infiniteLoop={true}

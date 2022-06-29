@@ -4,11 +4,12 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
+    
   <ColorProvider>
     
-    <Layout>
+    
       <Component {...pageProps} />
-    </Layout>
+    
   </ColorProvider>
   );
   
