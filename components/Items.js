@@ -35,7 +35,7 @@ function Items() {
         infiniteLoop={true}
         swipeAnimationHandler={true}
         swipeable={true}
-        interval={3000}
+        interval={6000}
 
         className="z-10  mx-44 bg-bg13 mb-28 "
        
@@ -43,18 +43,18 @@ function Items() {
 
         >   
         <div className="mx-28 ">
-            <h1 className=" pl-11 font-bold border-rounded rounded-full text-yellow-700 items-center justify-center text-9xl py-10 font-Koulen bg-bg10" >The best food in town</h1>
+            <h1 className=" pl-11 font-bold  text-yellow-700 items-center justify-center text-9xl py-10 font-Koulen bg-bg10" >The best food in town</h1>
             </div>
-            <div className="bg-bg10 rounded-full">
+            <div className="bg-bg10 ">
             <h1 className="  pl-11 font-bold text-orange-800 items-center justify-center text-9xl py-10 font-Koulen bg-bg11 rounded-full" >The best foosa in town</h1>
             </div>
             </Carousel>
         <div className="pl-24 bg-red-900 pb-0 ">
             <h1 className="text-white text-2xl font-bold">Our offers</h1>
         </div>
-            <div className= {scrolled ? "flex scroll-mx-44 transition-all transform duration-200 ease-in-out items-center pt-4 pl-7 overflow-x-scroll w-[1200px] " : "flex  items-center pt-4 pl-7 overflow-x-scroll w-[1200px] "}>
+        <div className= {scrolled ? "flex space-x-2 mx-auto scroll-mx-44 transition-all transform duration-200 ease-in-out    overflow-hidden items-center pt-4 pl-7 overflow-x-scroll w-[70%] " : "flex  items-center pt-4 pl-7 overflow-x-scroll w-[1200px] " } data-aos='fade-right' >
 
-            <div className="hover:scale-110 hover:pr-5  items-center border-r-2 border-gray-700 h-96 w-full rounded-lg bg-bg6 bg-cover transition transform duration-1000 ease-out bg-transparent hover:cursor-pointer">
+            <div className="hover:scale-110  hover:w-96 w-96 hover:z-30 items-center border-r-2 border-gray-700 h-96  rounded-lg bg-bg6  bg-cover transition transform duration-1000 ease-out bg-transparent hover:cursor-pointer">
                     <h1 className="font-bold shadow-lg bg-red-900 p-10 ">The Slider</h1>
                 </div>
 
@@ -70,7 +70,7 @@ function Items() {
                     <h1 className="font-bold shadow-lg bg-purple-900 p-10 text-xl">The Royal Flush</h1>
                 </div>
 
-                <div className="hover:scale-110 hover:pr-5  items-center border-r-2 border-gray-700 h-96 w-full rounded-lg bg-bg4 transition transform duration-1000 ease-out bg-transparent hover:cursor-pointer">
+                <div className="hover:scale-110 hover:pr-5  items-center border-r-2 border-gray-700 h-96 w-full rounded-lg bg-bg4 transition transform duration-1000 ease-out bg-transparent hover:cursor-pointer ">
                     <h1 className="font-bold shadow-lg bg-purple-900 p-10 text-xl">The Royal Flush</h1>
                 </div>
                 <div className="hover:scale-110 hover:pr-5  items-center border-r-2 border-gray-700 h-96 w-full rounded-lg bg-bg4 transition transform duration-1000 ease-out bg-transparent hover:cursor-pointer">

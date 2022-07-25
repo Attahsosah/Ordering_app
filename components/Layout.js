@@ -6,7 +6,7 @@ import Menu from "./Menu";
 import NewMenu from "./NewMenu";
 function Layout({ children }) {
     return (
-        <div className="bg-black">
+        <div className="bg-black bg-gradient-to-b from-gray-900/10  to-[#44424279] ">
             <>
                 <Navbar />
                 <HeroCarousel />
