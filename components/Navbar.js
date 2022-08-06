@@ -37,10 +37,10 @@ function Navbar() {
     return (
 
         
-        <div className={scrolled ? "flex sticky top-0  justify-between   bg-black bg-opacity-70  px-10  transition-all transform duration-500 ease-in-out z-50": "flex sticky top-0  justify-between   bg-yellow-700 bg-opacity-20 h-32 z-50"} >
+        <div className={scrolled ? "hidden lg:flex items-center sticky top-0  justify-between   bg-black bg-opacity-70  px-10  transition-all transform duration-500 ease-in-out z-50 ": "hidden lg:flex sticky items-center top-0  justify-between   bg-yellow-700 bg-opacity-20 h-32 z-50"} >
             
             
-            <div className="flex  p-10 justify-content items-center  justify-between  space-x-4">
+            <div className="flex  px-10 justify-content items-center  justify-between  space-x-4">
            
                    
                
@@ -60,9 +60,10 @@ function Navbar() {
                     
                     
 
-                    <div className="grid text-white">
-                    <h1  className="cursor-pointer hover:scale-105 ease-out"> ORDER NOW ! </h1>
-                    <h1 className="text-bold font-sans ">012 482 185</h1>
+                    <div className="grid group text-white">
+                        
+                        <h1  className="hidden group -hover:flex cursor-pointer hover:scale-105 ease-out"> ORDER NOW ! </h1>
+                        <h1 className="hidden group-hover  text-bold font-sans ">012 482 185</h1>
 
 
                     </div>
@@ -76,7 +77,7 @@ function Navbar() {
             </div>
 
 
-            <div className="p-10 text-lg text-white">
+            <div className="px-10 py-5 text-lg text-white">
                 <ul className="flex space-x-10">
                     <li  className="cursor-pointer hover:scale-105 ease-out">Homepage</li>
                     <li  className="cursor-pointer hover:scale-105 ease-out">Products</li>
@@ -86,7 +87,7 @@ function Navbar() {
             </div>
 
 
-            <div className="flex p-10 text-lg text-white">
+            <div className="flex px-10 py-5 text-lg text-white">
             <ul className="flex  md:space-x-10 ">
                     <li className="cursor-pointer hover:scale-105 transition ease-out">Events</li>
                     <li className="cursor-pointer hover:scale-105 ease-out">Blog</li>

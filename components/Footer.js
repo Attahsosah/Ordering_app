@@ -13,7 +13,7 @@ function Footer() {
                 <h1>Copyright</h1>
             </div>
             <div className="justify-center">
-            <div className="   text-[30px] font-Koulen  pt-15  ">
+            <div className="   text-[18px] font-Koulen  pt-15  pr-12">
              <h1 className="hover:scale-105 transition transform duration-700">Help & Service</h1>
                 <p className="hover:scale-105 transition transform duration-700 pr-5">Privacy</p>
                 <p className="hover:scale-105 transition transform duration-700">Terms & Conditions</p>

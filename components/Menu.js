@@ -67,8 +67,9 @@ function Menu() {
   return (
     <div className=''>
         
-            <div className='pl-10 bg-gray-800'>
-                <h1 className=' text-2xl font-serif font-bold text-white ' >The Menu</h1>
+            <div className='flex space-x-4 pl-10 bg-gray-800'>
+                <h1 className=' text-2xl font-serif font-bold text-white ' >The Menus</h1>
+                <div className='bg-yellow-400 w-[0.02em] h-full'/>
             </div>
 
             <div className=' bg-gray-200'>
@@ -88,12 +89,12 @@ function Menu() {
                     {/* onClick={() => setClicked(!clicked)} */}
                     {/* onPointerOver={() => setHover(!hover)} */}
                         <h1   onClick={handleOpen} onPointerOver={() => setHover(!hover)}>Burgers</h1>
-                        <ul className= {hover ? 'justify-between pb-4': "hidden"}>
+                        <div className= {hover ? 'flex-col space-y-5 justify-between pb-4 ': "hidden"}>
                             <li className='text-yellow-500 pb-4'>Beef Burger</li>
-                            <li className='text-yellow-500pb-4'>Fried Chicken Burger</li>
+                            <li className='text-yellow-500 pb-4'>Fried Chicken Burger</li>
                             <li className='text-yellow-500'>Cheese Burger</li>
 
-                        </ul>
+                        </div>
                         
                             <Modal
                                 open={open}

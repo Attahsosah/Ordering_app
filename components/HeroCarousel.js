@@ -1,13 +1,24 @@
 import Image from "next/image"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function HeroCarousel(){
 
     const [opened, setOpened] = useState(false)
+    const [passed, setPassed] = useState(false);
 
-    
+    useEffect(() => {
+        const timer = () => {
+            setTimeout(() => {
+                setPassed(true)
+            }, 3000);
+
+            
+        }
+        console.log("Passed", passed)
+    },[passed])
+    console.log("Passed", passed)
     return(
         
 
@@ -53,19 +64,19 @@ function HeroCarousel(){
         swipeable={true}
         interval={3000}
 
-        className="z-10 w-full m-auto bg-bg11  mb-28  hover:animate-pulse" 
+        className="z-10 w-full m-auto   mb-28  hover:animate-pulse" 
         
        
 
 
         >   
         <div className="" >
-        <h1 className=" pl-11 font-bold  text-yellow-700 items-center justify-center text-9xl py-10 font-Koulen transition-all  transform  duration-[3s] hover:animate-pulse bg-gradient-to-l from-slate-100 to-slate-900 border-b-black" >The  Food Locker</h1>
+        <h1 className=" pl-11  font-thin  text-gray-200 items-center justify-center text-3xl hover:text-5xl  lg:text-9xl py-10 font-Koulen transition-all  transform  duration-[3s] hover:animate-pulse bg-gradient-to-l from-slate-100 to-slate-900 border-b-black" >The  Food Locker</h1>
         {/* <img className="object-fill w-full b" src="img/coffee.jpg" /> */}
             {/* <h1 className=" pl-11 font-bold  text-yellow-700 items-center justify-center text-9xl py-10 font-Koulen bg-bg10" >The best food in town</h1> */}
             </div>
             <div className="" >
-        <h1 className=" pl-11 font-bold  text-yellow-700 items-center justify-center text-9xl py-10 font-Koulen transition-all  transform  duration-[3s] hover:animate-pulse bg-gradient-to-l from-slate-100 to-slate-900 border-b-black" >Unlock The Feast</h1>
+        <h1 className=" pl-11 font-bold  text-yellow-700 items-center justify-center text-3xl hover:text-5xl   lg:text-9xl py-10 font-Koulen transition-all  transform  duration-[3s] hover:animate-pulse bg-gradient-to-l from-slate-100 to-slate-900 border-b-black" >Unlock The Feast</h1>
         {/* <img className="object-fill w-full b" src="img/coffee.jpg" /> */}
             {/* <h1 className=" pl-11 font-bold  text-yellow-700 items-center justify-center text-9xl py-10 font-Koulen bg-bg10" >The best food in town</h1> */}
             </div>

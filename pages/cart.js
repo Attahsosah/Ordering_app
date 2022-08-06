@@ -1,21 +1,21 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { HomeIcon } from "@heroicons/react/outline";
-import { useRouter } from 'next/dist/client/router';
+import { Router, useRouter } from 'next/dist/client/router';
 import Footer from '../components/Footer';
 import ShoppingCart from '../components/ShoppingCart';
 
 function cart() {
 
-    const router = useRouter();
+  
 
 
-    const home = () => {
-        router.push({
+    // const home = () => {
+    //     router.push({
 
-            pathname: "/",
+    //         pathname: "/",
 
-        });
+    //     });
     }
   return (
     <div className=''>

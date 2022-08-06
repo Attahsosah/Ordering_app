@@ -1,6 +1,8 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 function Items() {
@@ -21,6 +23,9 @@ function Items() {
             window.removeEventListener("scroll", scrollChange)
         }
     })
+    useEffect(() => {
+        AOS.init();
+    },[])
     return (
         
 
@@ -37,22 +42,23 @@ function Items() {
         swipeable={true}
         interval={6000}
 
-        className="z-10  mx-44 bg-bg13 mb-28 "
+        className="z-10  lg:mx-44 bg-bg13  mb-28 "
        
 
 
         >   
-        <div className="mx-28 ">
+        <div className="lg:mx-28 bg-no-repeat">
             <h1 className=" pl-11 font-bold  text-yellow-700 items-center justify-center text-9xl py-10 font-Koulen bg-bg10" >The best food in town</h1>
             </div>
-            <div className="bg-bg10 ">
+            {/* <div className="bg-bg10 ">
             <h1 className="  pl-11 font-bold text-orange-800 items-center justify-center text-9xl py-10 font-Koulen bg-bg11 rounded-full" >The best foosa in town</h1>
-            </div>
+            </div> */}
             </Carousel>
-        <div className="pl-24 bg-red-900 pb-0 ">
-            <h1 className="text-white text-2xl font-bold">Our offers</h1>
+        <div className="pl-24  mb-4 flex space-x-4 pb-0 ">
+            <h1 className="text-gray-200 text-2xl font-bold" data-aos='fade-in' data-aos-duration='3000'>Our offers</h1>
+            <div className='bg-yellow-400 w-[0.02em] hover:w-[0.05em]' data-aos='fade-in' data-aos-duration='4000'/>
         </div>
-        <div className= {scrolled ? "flex space-x-2 mx-auto scroll-mx-44 transition-all transform duration-200 ease-in-out    overflow-hidden items-center pt-4 pl-7 overflow-x-scroll w-[70%] " : "flex  items-center pt-4 pl-7 overflow-x-scroll w-[1200px] " } data-aos='fade-right' >
+        <div className= {scrolled ? "flex space-x-2 mx-auto scroll-mx-44 transition-all transform duration-200 ease-in-out    overflow-hidden items-center pt-4 pl-7 overflow-x-scroll w-[70%] " : "flex  items-center pt-4 pl-7 overflow-x-scroll w-[1200px] " } data-aos='fade-right' data-aos- >
 
             <div className="hover:scale-110  hover:w-96 w-96 hover:z-30 items-center border-r-2 border-gray-700 h-96  rounded-lg bg-bg6  bg-cover transition transform duration-1000 ease-out bg-transparent hover:cursor-pointer">
                     <h1 className="font-bold shadow-lg bg-red-900 p-10 ">The Slider</h1>
