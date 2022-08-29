@@ -7,16 +7,16 @@ import ShoppingCart from '../components/ShoppingCart';
 
 function cart() {
 
-  
+  const router = useRouter();
 
 
-    // const home = () => {
-    //     router.push({
+    const home = () => {
+        router.push({
 
-    //         pathname: "/",
+            pathname: "/",
 
-    //     });
-    }
+        });
+      }
   return (
     <div className=''>
        <div className='flex sticky top-0  justify-between    bg-red-800  h-15 z-50 '>

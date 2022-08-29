@@ -81,7 +81,7 @@ function Navbar() {
                 <ul className="flex space-x-10">
                     <li  className="cursor-pointer hover:scale-105 ease-out">Homepage</li>
                     <li  className="cursor-pointer hover:scale-105 ease-out">Products</li>
-                    <li  className="cursor-pointer hover:scale-105 ease-out">Menu</li>
+                    {/* <Link href=''> <li  className="cursor-pointer hover:scale-105 ease-out">Menu</li></Link> */}
 
                 </ul>
             </div>
