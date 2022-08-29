@@ -21,7 +21,7 @@ function cart() {
     <div className=''>
        <div className='flex sticky top-0  justify-between    bg-red-800  h-15 z-50 '>
          <div className='justify-start'>
-           <HomeIcon onClick={home} className='h-12 text-gray-600 hover:text-black' />
+           <HomeIcon  className='h-12 text-gray-600 hover:text-black' />
 
          </div>
          <div className='justify-center'>
