@@ -43,7 +43,7 @@ function NewMenu() {
       
         {
         uniqueFood.map( (food) => (
-          <div className="">
+          <div className="" key={food.id}>
             
 
             <h2 onClick={() => setSelected(food.type)  }  onPointerOver={() => setSelected(food.type)} className= "text-[20px] pb-9 pl-2 text-yellow-600 hover:text-white hover:scale-105 active:scale-105 active:border-b-2  font-Koulen ">{food.type}</h2>

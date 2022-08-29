@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import { HomeIcon } from "@heroicons/react/outline";
-import { Router, useRouter } from 'next/dist/client/router';
+import {  useRouter } from 'next/dist/client/router';
 import Footer from '../components/Footer';
 import ShoppingCart from '../components/ShoppingCart';
 
