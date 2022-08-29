@@ -58,7 +58,7 @@ function NewMenu() {
 
          
         {food.filter(food => food.type === selected).map((selected) => (
-          <h2>{selected.name}</h2>
+          <h2 key={selected.id}>{selected.name}</h2>
         ))}
           
         </div>
