@@ -1,9 +1,11 @@
-import {  createContext, useState } from "react";
+import {  createContext, useEffect, useState } from "react";
 
 export const ChangeContext = createContext(); 
 export const HoverContext = createContext();
 export const TypeContext = createContext();
 export const SelectedContext = createContext();
+export const StagedContext = createContext();
+export const CartContext = createContext();
 export const ColorProvider = ({children}) =>{
     const [clicked, setClicked ] = useState(false);
 
@@ -138,16 +140,24 @@ let food = [
 
 
 const [selected, setSelected] = useState("burgers");
+const [staged, setStaged] = useState({})
+const [cart, setCart] = useState([])
 
-
-
+useEffect(() => {
+  console.log(staged)
+},[staged])
 
     return(
         <ChangeContext.Provider value={[clicked, setClicked]}>
             <HoverContext.Provider value={[hover, setHover]}>
                 <TypeContext.Provider value={food}>
                     <SelectedContext.Provider value={[selected, setSelected]}>
-                      {children}
+                      <StagedContext.Provider value={[staged, setStaged]}>
+                        <CartContext.Provider value={[cart, setCart]}>
+                        {children}
+                        </CartContext.Provider>
+
+                      </StagedContext.Provider>
                       </SelectedContext.Provider> 
                  </TypeContext.Provider>
             </HoverContext.Provider>

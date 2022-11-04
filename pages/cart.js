@@ -1,9 +1,11 @@
-import React from 'react'
 import Navbar from '../components/Navbar'
 import { HomeIcon } from "@heroicons/react/outline";
 // import {  useRouter } from 'next/dist/client/router';
 import Footer from '../components/Footer';
 import ShoppingCart from '../components/ShoppingCart';
+import { CartContext, StagedContext } from '../components/context/ColorContext';
+import Link from 'next/link';
+import { useContext } from 'react';
 
 function cart() {
 
@@ -16,12 +18,25 @@ function cart() {
   //           pathname: "/",
 
   //       });
+  const home = () => {
+    router.push({
+
+        pathname: "/",
+        
+    });
+}
+  const [staged, setStaged] = useContext(StagedContext)
+  const [cart, setCart] = useContext(CartContext)
+
       
   return (
     <div className=''>
        <div className='flex sticky top-0  justify-between    bg-red-800  h-15 z-50 '>
          <div className='justify-start'>
-           <HomeIcon  className='h-12 text-gray-600 hover:text-black' />
+          <Link href='/'>
+             <HomeIcon  className='h-12 text-gray-600 hover:text-black' />
+
+          </Link>
 
          </div>
          <div className='justify-center'>
@@ -30,18 +45,24 @@ function cart() {
 
 
          <div className="justify-end">
-
+        
 
          </div>
 
 
          <div>
-            <h1>Your Order: </h1>
+         
+            
           </div>
 
            
        </div>
        <ShoppingCart />
+       <div clasName="">
+      
+
+       </div>
+     
        <Footer className="sticky bottom-0" />
        
     </div>

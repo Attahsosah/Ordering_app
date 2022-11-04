@@ -21,7 +21,8 @@ module.exports = {
         'bg10':"url('https://media.timeout.com/images/105825245/750/422/image.jpg')",
         'bg11':"url('https://img.freepik.com/free-photo/wooden-planks-with-blurred-restaurant-background_1253-56.jpg')",
         'bg12':"url('https://t3.ftcdn.net/jpg/01/66/37/30/360_F_166373046_qSUBKLI29KeLAv2CpGrDo5juU7mUFOUw.jpg')",
-        'bg13':"url('https://t4.ftcdn.net/jpg/04/43/37/07/360_F_443370711_sqHRnSIQovW6uyQ5ZwDpd4kjCG8Q6swm.jpg')"
+        'bg13':"url('https://t4.ftcdn.net/jpg/04/43/37/07/360_F_443370711_sqHRnSIQovW6uyQ5ZwDpd4kjCG8Q6swm.jpg')",
+        'bg14':"url('https://img.freepik.com/premium-photo/wooden-table-restaurant-blurred-background_81724-265.jpg')"
       } 
     },
   },

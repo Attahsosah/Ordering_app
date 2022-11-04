@@ -4,15 +4,17 @@ import HeroCarousel from "./HeroCarousel"
 import Items from "./Items";
 import Menu from "./Menu";
 import NewMenu from "./NewMenu";
+import Meal from "./Meal";
 function Layout({ children }) {
     return (
-        <div className="bg-black bg-gradient-to-b from-gray-900/10  to-[#44424279] ">
+        <div className=" bg-gradient-to-b from-gray-900/10  to-[#44424279] ">
             <>
                 <Navbar />
                 <HeroCarousel />
                 <Items />
                 
                 <NewMenu />
+                <Meal />
                 
                 
 

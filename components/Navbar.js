@@ -3,13 +3,14 @@ import { ShoppingCartIcon } from "@heroicons/react/outline";
 import { ChangeContext } from "./context/ColorContext";
 import { useContext, useState, useEffect } from "react";
 import Link from 'next/link';
-
+// import { motion } from "framer-motion";
 
 function Navbar() {
 
 
     const [clicked, setClicked] = useContext(ChangeContext)
     const [scrolled, setScrolled] = useState(false)
+
     const cart = () => {
         router.push({
 
@@ -20,9 +21,12 @@ function Navbar() {
 
 
     const scrollChange = () => {
-        if (window.scrollY > 60){
+        if (window.scrollY >  60  && window.scrollY ){
             setScrolled(true)
         }
+       
+        
+        
         else {
             setScrolled(false)
         }
@@ -37,7 +41,7 @@ function Navbar() {
     return (
 
         
-        <div className={scrolled ? "hidden lg:flex items-center sticky top-0  justify-between   bg-black bg-opacity-70  px-10  transition-all transform duration-500 ease-in-out z-50 ": "hidden lg:flex sticky items-center top-0  justify-between   bg-yellow-700 bg-opacity-20 h-32 z-50"} >
+        <div className={scrolled ? "hidden lg:flex items-center sticky top-0  justify-between   bg-black bg-opacity-70  px-10  transition-all transform duration-500 ease-in-out z-50 ": "hidden lg:flex sticky items-center top-0  justify-between   bg-yellow-700 bg-opacity-20 h-32 z-50" }  >
             
             
             <div className="flex  px-10 justify-content items-center  justify-between  space-x-4">
@@ -48,15 +52,31 @@ function Navbar() {
              
                
                 <div className=" flex text-bold text-lg">
-                    <div className="px-5">
+                {/* <motion.div
+                initial={{
+                    x:-500,
+                    opacity:0,
+                    scale:0.5,
 
+                }}
+                animate={{
+
+                    x:0,
+                    opacity:1, 
+                    scale:1
+                }}
+                
+                >
+                    <div className="px-5">
+                    
                     <Image 
                      width="30"
                      height="32"
                      className="rounded-full px-5"
                      src="/img/telephone.png" />
                     </div>
-               
+                    </motion.div>
+                */}
                     
                     
 

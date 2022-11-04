@@ -1,9 +1,9 @@
-import React from 'react'
+// imp÷ßort React from 'react'
 
 function FoodMenu() {
   return (
     <div>
-        
+        hello world 
     </div>
   )
 }
