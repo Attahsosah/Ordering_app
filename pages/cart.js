@@ -7,7 +7,7 @@ import { CartContext, StagedContext } from '../components/context/ColorContext';
 import Link from 'next/link';
 import { useContext } from 'react';
 
-function cart() {
+function Cart() {
 
   // const router = useRouter();
 
@@ -69,4 +69,4 @@ function cart() {
   )
 }
 
-export default cart
+export default Cart
