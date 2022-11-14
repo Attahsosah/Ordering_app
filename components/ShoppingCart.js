@@ -6,11 +6,11 @@ function ShoppingCart() {
   const [cart, setCart] = useContext(CartContext)
 
   return (
-    <div className='h-screen text-red '>
+    <div className='flex h-screen text-red '>
       {
       cart.map((food) => (
         <>
-        <div className='bg-white'>
+        <div className='grid bg-white'>
 
        
         <h1>{food.name}</h1>

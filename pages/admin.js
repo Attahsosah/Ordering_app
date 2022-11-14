@@ -1,9 +1,9 @@
 import { data } from 'autoprefixer';
 import { addDoc, collection } from 'firebase/firestore';
-import { useState } from 'react'
+import { useState } from 'react';
 import { db } from '../firebase';
 
-function admin() {
+function Admin() {
     const [name, setName] = useState("");
     const [type, setType] = useState('');
     const [price, setPrice] = useState('');
@@ -111,4 +111,4 @@ function admin() {
   )
 }
 
-export default admin
+export default Admin
