@@ -7,7 +7,7 @@ import NewMenu from "./NewMenu";
 import Meal from "./Meal";
 function Layout({ children }) {
     return (
-        <div className="  ">
+        <div className=" bg-black ">
             <>
                 <Navbar />
                 <HeroCarousel />
