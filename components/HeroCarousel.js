@@ -71,8 +71,7 @@ function HeroCarousel(){
 
         >   
         <div className="" >
-        <h1 className=" pl-11  font-thin  text-gray-200 items-center justify-center text-3xl hover:text-5xl  lg:text-9xl py-10 font-Koulen transition-all  transform  duration-[3s] hover:animate-pulse bg-gradient-to-l from-slate-100
-         to-slate-900 border-b-black tracking-[10px] hover:tracking-[20px]" >The  Food Locker</h1>
+        <h1 className=" pl-11  font-thin  text-gray-200 items-center justify-center text-3xl hover:text-5xl  lg:text-9xl py-10 font-Koulen transition-all  transform  duration-[3s] hover:animate-pulse  border-b-black tracking-[10px] hover:tracking-[20px]" >The  Food Locker</h1>
         {/* <img className="object-fill w-full b" src="img/coffee.jpg" /> */}
             {/* <h1 className=" pl-11 font-bold  text-yellow-700 items-center justify-center text-9xl py-10 font-Koulen bg-bg10" >The best food in town</h1> */}
             </div>
