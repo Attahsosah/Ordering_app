@@ -7,7 +7,7 @@ import NewMenu from "./NewMenu";
 import Meal from "./Meal";
 function Layout({ children }) {
     return (
-        <div className=" bg-gradient-to-b from-gray-900/10  to-[#44424279] ">
+        <div className="  ">
             <>
                 <Navbar />
                 <HeroCarousel />
