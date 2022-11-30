@@ -10,6 +10,7 @@ function NewMenu({Type, Clicked, id , name, price}) {
     const [foods, setFoods] = useState([]);
     const [selected, setSelected] = useContext(SelectedContext)
     const [staged, setStaged] = useContext(StagedContext)
+    const [picked, setPicked] = useState(false)
     const [cart, setCart] = useContext(CartContext);
     const food = useContext(TypeContext)
     console.log(food)
@@ -109,7 +110,7 @@ function NewMenu({Type, Clicked, id , name, price}) {
          
         { foods.filter(food => food.data().Type === selected).map((selected) => (
           <>
-                    <h2 className='hover:bg-yellow-500 active:scale-75 transition transform duration-1000 ' onClick={ () => setStaged(selected.data())} key={selected.data().id}>{selected.data().name}</h2>
+                    <h2 className='hover:bg-yellow-500 active:scale-75 transition transform duration-1000 text-white' onClick={ () => setStaged(selected.data())} key={selected.data().id} onPointerOver={() => setPicked(true)}>{selected.data().name}</h2>
                     <h2 key={selected.data().id}>{selected.data().price}</h2>
                     <button onClick={() => addToCart(selected.data())}className='bg-black text-white p-2'>Add</button>
                    
@@ -127,10 +128,10 @@ function NewMenu({Type, Clicked, id , name, price}) {
 
           
         </div>
-        <div className=' justify-end px-40'>
+        <div className=' justify-end px-40 z-0'>
           { foods.filter(food => food.data().Type === selected).map((selected) => (
           <>
-          <div className=''>
+          <div className={picked ? '' : 'hidden'}>
                         <img className='p-4  rounded-lg  hover:scale-105 transition transform duration-500  h-48 w-48' src={selected.data().image} />
 
                       </div>

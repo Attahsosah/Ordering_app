@@ -30,7 +30,7 @@ function Cart() {
 
       
   return (
-    <div className=''>
+    <div className='bg-black'>
        <div className='flex sticky top-0  justify-between    bg-red-800  h-15 z-50 '>
          <div className='justify-start'>
           <Link href='/'>
