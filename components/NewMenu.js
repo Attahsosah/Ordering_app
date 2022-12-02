@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import { SelectedContext, TypeContext, HoverContext, ChangeContext, StagedContext, CartContext } from './context/ColorContext'
 import {db} from '../firebase'
 import { collection, getDocs, onSnapshot, orderBy, query } from "firebase/firestore";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 function NewMenu({Type, Clicked, id , name, price}) {
     // const [type, setType] = useContext(TypeContext)
     const handleOpen = () => setOpen(true);
@@ -89,14 +91,14 @@ function NewMenu({Type, Clicked, id , name, price}) {
         {/* Left side */}
        
       <div className='block space-y-5'>
-
+     
       
         {
         uniqueFood.map((food) => (
           <div className=""  key={food.id}>
             
 
-            <h2 key={food.id} onClick={() => setSelected(food.data().Type)  }  onPointerOver={() => setSelected(food.data().Type)} className= "text-[20px] pb-9 pl-2 text-yellow-600 hover:text-white hover:scale-105 active:scale-105 active:border-b-2  font-Koulen  transition-all duration-2000">{food.data().Type}</h2>
+            <h2 key={food.id} onClick={() => setSelected(food.data().Type)  }  onPointerOver={() => setSelected(food.data().Type)} className= "text-[20px] pb-9 pl-2 text-yellow-600 hover:text-white hover:scale-105 active:scale-105 active:border-b-2  font-Koulen  transition-all duration-2000">{food.data().Type || <Skeleton /> } </h2>
             
           </div>
         ))
@@ -110,7 +112,7 @@ function NewMenu({Type, Clicked, id , name, price}) {
          
         { foods.filter(food => food.data().Type === selected).map((selected) => (
           <>
-                    <h2 className='hover:bg-yellow-500 active:scale-75 transition transform duration-1000 text-white' onClick={ () => setStaged(selected.data())} key={selected.data().id} onPointerOver={() => setPicked(true)}>{selected.data().name}</h2>
+                    <h2 className='hover:bg-yellow-500 active:scale-75 transition transform duration-1000 text-white' onClick={ () => setStaged(selected.data())} key={selected.data().id} onPointerOver={() => setPicked(true)}>{selected.data().name || <Skeleton />}</h2>
                     <h2 key={selected.data().id}>{selected.data().price}</h2>
                     <button onClick={() => addToCart(selected.data())}className='bg-black text-white p-2'>Add</button>
                    
@@ -128,6 +130,7 @@ function NewMenu({Type, Clicked, id , name, price}) {
 
           
         </div>
+    
         <div className=' justify-end px-40 z-0'>
           { foods.filter(food => food.data().Type === selected).map((selected) => (
           <>

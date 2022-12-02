@@ -5,7 +5,15 @@ import { useContext, useState, useEffect } from "react";
 import Link from 'next/link';
 // import { motion } from "framer-motion";
 
+const { motion } = require("framer-motion");
+
+  
 function Navbar() {
+    const spring = {
+        type: "spring",
+        damping: 10,
+        stiffness: 100
+      }
 
 
     const [clicked, setClicked] = useContext(ChangeContext)
@@ -100,7 +108,28 @@ function Navbar() {
             <div className="px-10 py-5 text-lg text-white">
                 <ul className="flex space-x-10">
                     <li  className="cursor-pointer hover:scale-105 ease-out">Homepage</li>
-                    <li  className="cursor-pointer hover:scale-105 ease-out">Products</li>
+                    <Link 
+                     href='#offer'
+          
+                    >
+
+                    <motion.li
+                     initial={{
+                        x:500,
+                        opacity:0,
+                        scale:0.5,
+                      }}
+                      animate={{
+                        x:0,
+                        opacity:1,
+                        scale:1,
+                      }}
+                      transition={{
+                        duration:1.5
+                      }}
+
+                      className="cursor-pointer hover:scale-105 ease-out">Offers</motion.li>
+                    </Link>
                     {/* <Link href=''> <li  className="cursor-pointer hover:scale-105 ease-out">Menu</li></Link> */}
 
                 </ul>
@@ -109,7 +138,29 @@ function Navbar() {
 
             <div className="flex px-10 py-5 text-lg text-white">
             <ul className="flex  md:space-x-10 ">
-                    <li className="cursor-pointer hover:scale-105 transition ease-out">Events</li>
+            <Link 
+                     href='#menu'
+          
+                    >
+                    <motion.li
+                     initial={{
+                        x:500,
+                        opacity:0,
+                        scale:0.5,
+                      }}
+                      animate={{
+                        x:3,
+                        opacity:1,
+                        scale: 1,
+
+                      }}
+                      transition={{
+                        spring,
+                        duration:1.5
+                      }}
+
+                     className="cursor-pointer hover:scale-105 transition ease-out">Our Menu</motion.li>
+                     </Link>
                     <li className="cursor-pointer hover:scale-105 ease-out">Blog</li>
                     <li className="cursor-pointer hover:scale-105 ease-out">Contact</li>
 
@@ -118,12 +169,34 @@ function Navbar() {
 
 
             </div>
-            <div className="flex items-center p-8 z-50">
+            <motion.div
+            initial={{
+                x:15,
+                opacity:0,
+                scale:0.5,
+              }}
+              animate={{
+                x:[15,15,15,15,15,15,15,15,15,15,15,15,15,500,15],
+                opacity:1,
+                scale: [1,1,1,1,1,1,1,1,1,1,1,1,1,3,1],
+                rotate:[50,45,44,43,42,41,40,39,25,19,5,5,5,5,5,5,0,180,180,180,360,360, 360,180 ,50,0]
+
+              }}
+              whileHover={{ scale: [1.112,1,1.112,1,1.112,1,1.112,1,],
+                 x:[15,30,10,0,-40,15,30,10,0,-40,15,30,10,0,-40,] ,
+                 
+                }}
+              transition={{
+                duration:3.5
+              }}
+            
+            className={scrolled ? "hidden":"flex items-center p-8 z-50"}>
             <Link  href="/cart">
+                
                 <ShoppingCartIcon   className="cursor-pointer md: pl-11 text-white text-sm h-7 "/>
             </Link>
 
-            </div>
+            </motion.div>
         </div>
     )
 }
