@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         Koulen: ["Koulen","cursive"],
       },
+      
       backgroundImage: {
         'bg1': "url('https://theburgerspriest.com/wp-content/uploads/2019/06/Burgers_Icon-min.jpg')",
         'bg2': "url('https://image.freepik.com/free-vector/burger-fast-food-restaurant-promotion-social-media-template_115476-164.jpg')",

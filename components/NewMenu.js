@@ -134,7 +134,7 @@ function NewMenu({Type, Clicked, id , name, price}) {
         <div className=' justify-end px-40 z-0'>
           { foods.filter(food => food.data().Type === selected).map((selected) => (
           <>
-          <div className={picked ? '' : 'hidden'}>
+          <div className=''>
                         <img className='p-4  rounded-lg  hover:scale-105 transition transform duration-500  h-48 w-48' src={selected.data().image} />
 
                       </div>

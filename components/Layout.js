@@ -8,10 +8,18 @@ import Meal from "./Meal";
 import Link from 'next/link';
 import { ShoppingCartIcon } from "@heroicons/react/outline";
 import { useContext, useState, useEffect } from "react";
+import SideBar from "./SideBar";
+import { CartContext, StagedContext, SelectedContext } from './context/ColorContext'
+
 
 const { motion } = require("framer-motion");
 function Layout({ children }) {
     const [scrolled, setScrolled] = useState(false)
+    const [chosen, setChosen] = useState(false)
+    const [staged, setStaged] = useContext(StagedContext)
+    const [display, setDisplay] = useState(false)
+    const [cart, setCart] = useContext(CartContext)
+    const [selected, setSelected] = useContext(SelectedContext)
     const scrollChange = () => {
         if (window.scrollY >  60  && window.scrollY ){
             setScrolled(true)
@@ -31,12 +39,16 @@ function Layout({ children }) {
         }
     })
     return (
-        <div className=" bg-black ">
-            <>
+        <div className=" bg-white ">
+            <>      
+                {/* <section id="home"> */}
                 <Navbar />
-                <section  className=''>
+
+                {/* </section> */}
+               
+                
                 <HeroCarousel />
-                </section>
+               
                 <section id="offer" className='' >
                 
                 <Items />
@@ -48,6 +60,8 @@ function Layout({ children }) {
                 </section>
                 <Meal />
                 
+               
+                
                 
 
                 { children }
@@ -58,7 +72,7 @@ function Layout({ children }) {
                     scale:0.5,
                   }}
                   animate={{
-                    x:[15,15,15,15,15,15,15,15,15,15,15,15,15,500,15],
+                    x:[15,15,15,15,15,15,15,15,15,15,15,15,15,500,0],
                     opacity:1,
                     scale: [1,1,1,1,1,1,1,1,1,1,1,1,1,3,1],
                     rotate:[50,45,44,43,42,41,40,39,25,19,5,5,5,5,5,5,0,180,180,180,360,360, 360,180 ,50,0]
@@ -71,9 +85,17 @@ function Layout({ children }) {
                 
                 className={scrolled ? "transition transform duration-[5000ms] ease-in sticky bottom-11 w-full cursor-pointer":"hidden"}>
                 <div className='flex items-center justify-end pr-4'>
-                    <Link  href="/cart">
-                        <ShoppingCartIcon  className='h-7 w-7 rounded-full filter grayscale hover:gray-scale-0 cursor-pointer top-0' />
-                    </Link>
+                <div  className={chosen ? '' : 'hidden'}>
+                <SideBar
+                
+                />
+                </div>
+                
+
+               
+                    
+                        <ShoppingCartIcon onClick={() =>setChosen(true)} className='h-7 w-7 rounded-full filter grayscale hover:gray-scale-0 cursor-pointer top-0' />
+                    
                 </div>
                 </motion.footer>
 

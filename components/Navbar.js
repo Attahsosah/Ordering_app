@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { ShoppingCartIcon } from "@heroicons/react/outline";
 import { ChangeContext } from "./context/ColorContext";
 import { useContext, useState, useEffect } from "react";
 import Link from 'next/link';
+import  Image from 'next/image'
 // import { motion } from "framer-motion";
 
 const { motion } = require("framer-motion");
@@ -49,10 +49,10 @@ function Navbar() {
     return (
 
         
-        <div className={scrolled ? "hidden lg:flex items-center sticky top-0  justify-between   bg-black bg-opacity-70  px-10  transition-all transform duration-500 ease-in-out z-50 ": "hidden lg:flex sticky items-center top-0  justify-between   bg-yellow-700 bg-opacity-20 h-32 z-50" }  >
+        <div className={scrolled ? "hidden lg:flex items-center sticky top-0  justify-between   bg-black bg-opacity-70  px-10  transition-all transform duration-500 ease-in-out z-50 h-14 ": "hidden lg:flex sticky items-center top-0  justify-between   bg-yellow-700 bg-opacity-20 h-32 z-50" }  >
             
             
-            <div className="flex  px-10 justify-content items-center  justify-between  space-x-4">
+            <div className="flex  px-7 justify-content items-center  justify-between  space-x-4">
            
                    
                
@@ -89,9 +89,22 @@ function Navbar() {
                     
 
                     <div className="grid group text-white">
+                        <Link href="#home">
                         
-                        <h1  className="hidden group -hover:flex cursor-pointer hover:scale-105 ease-out"> ORDER NOW ! </h1>
-                        <h1 className="hidden group-hover  text-bold font-sans ">012 482 185</h1>
+                        <Image
+                       
+                        src="/img/logo_transparent.png"
+                       className="  scale-150"
+                        alt="Picture of the author"
+                        width={200}
+                        height={200}
+                        objectFit="cover"
+                     />
+                     </Link>
+                                        
+                        
+                        {/* <h1  className=" group-hover:flex cursor-pointer hover:scale-105 ease-out"> ORDER NOW ! </h1>
+                        <h1 className=" group-hover  text-bold font-sans ">012 482 185</h1> */}
 
 
                     </div>
@@ -105,9 +118,9 @@ function Navbar() {
             </div>
 
 
-            <div className="px-10 py-5 text-lg text-white">
+            <div className=" items-center  text-lg text-white">
                 <ul className="flex space-x-10">
-                    <li  className="cursor-pointer hover:scale-105 ease-out">Homepage</li>
+                    
                     <Link 
                      href='#offer'
           
@@ -173,7 +186,8 @@ function Navbar() {
             initial={{
                 x:15,
                 opacity:0,
-                scale:0.5,
+                scale:0,
+                height:0,
               }}
               animate={{
                 x:[15,15,15,15,15,15,15,15,15,15,15,15,15,500,15],
@@ -184,6 +198,7 @@ function Navbar() {
               }}
               whileHover={{ scale: [1.112,1,1.112,1,1.112,1,1.112,1,],
                  x:[15,30,10,0,-40,15,30,10,0,-40,15,30,10,0,-40,] ,
+                 
                  
                 }}
               transition={{

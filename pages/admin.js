@@ -63,7 +63,7 @@ function Admin() {
             </input>
            
         </div>
-        <div className='block p-4'>
+        <div className='block   '>
             <h1 className='p-4 text-center'>Image</h1>
             <input className=' bg-transparent border border-yellow-600 rounded-md pl-4 hover:scale-105 transition-transform duration-1000'  value={image}   onChange={(e) => setImage(e.target.value)}  placeholder='Type here'>
                 
