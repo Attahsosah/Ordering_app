@@ -86,9 +86,9 @@ function Layout({ children }) {
                 className={scrolled ? "transition transform duration-[5000ms] ease-in sticky bottom-11 w-full cursor-pointer":"hidden"}>
                 <div className='flex items-center justify-end pr-4'>
                 <div  className={chosen ? '' : 'hidden'}>
-                <SideBar
+                {/* <SideBar
                 
-                />
+                /> */}
                 </div>
                 
 
