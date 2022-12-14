@@ -39,7 +39,7 @@ function Layout({ children }) {
         }
     })
     return (
-        <div className=" bg-white ">
+        <div className=" bg-black ">
             <>      
                 {/* <section id="home"> */}
                 <Navbar />
@@ -94,8 +94,8 @@ function Layout({ children }) {
 
                
                     
-                        <ShoppingCartIcon onClick={() =>setChosen(true)} className='h-7 w-7 rounded-full filter grayscale hover:gray-scale-0 cursor-pointer top-0' />
-                    
+                        <ShoppingCartIcon onClick={() =>setChosen(true)} className='h-7 w-7 text-yellow-700 z-10 rounded-full filter grayscale hover:gray-scale-0 cursor-pointer top-0' />
+                        <div className={chosen?"transition-all ease-in-out text-white":'hidden'} onClick={()=>setChosen(false)}>X</div>
                 </div>
                 </motion.footer>
 

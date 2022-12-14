@@ -11,6 +11,9 @@ module.exports = {
       
       backgroundImage: {
         'bg1': "url('https://theburgerspriest.com/wp-content/uploads/2019/06/Burgers_Icon-min.jpg')",
+        'Denim': "url('https://cdn.discordapp.com/attachments/800718490750418967/1052575070972813393/pexels-valeria-boltneva-1199959.jpg')",
+        'Cream': "url('https://cdn.discordapp.com/attachments/800718490750418967/1052575071220273183/pexels-kristina-paukshtite-1146758.jpg')",
+        'Cafe': "url('https://cdn.discordapp.com/attachments/800718490750418967/1052575071409012836/pexels-elle-hughes-2101150.jpg')",
         'bg2': "url('https://image.freepik.com/free-vector/burger-fast-food-restaurant-promotion-social-media-template_115476-164.jpg')",
         'bg3': "url('https://www.dominos.co.in/great-deals/online-pizza-coupons/images/story_images/evd/evd-199.jpg')",
         'bg4': "url('https://media-cdn.tripadvisor.com/media/photo-s/17/ad/2f/16/double-burger.jpg')",

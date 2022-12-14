@@ -141,7 +141,7 @@ function Navbar() {
                         duration:1.5
                       }}
 
-                      className="cursor-pointer hover:scale-105 ease-out">Offers</motion.li>
+                      className="cursor-pointer hover:scale-105 ease-out hover:bg-slate-900">Offers</motion.li>
                     </Link>
                     {/* <Link href=''> <li  className="cursor-pointer hover:scale-105 ease-out">Menu</li></Link> */}
 
@@ -184,16 +184,17 @@ function Navbar() {
             </div>
             <motion.div
             initial={{
-                x:15,
+                x:0,
                 opacity:0,
-                scale:0,
-                height:0,
+                
+                
               }}
               animate={{
                 x:[15,15,15,15,15,15,15,15,15,15,15,15,15,500,15],
                 opacity:1,
                 scale: [1,1,1,1,1,1,1,1,1,1,1,1,1,3,1],
-                rotate:[50,45,44,43,42,41,40,39,25,19,5,5,5,5,5,5,0,180,180,180,360,360, 360,180 ,50,0]
+                rotate:[50,45,44,43,42,41,40,39,25,19,5,5,5,5,5,5,0,180,180,180,360,360, 360,180 ,50,0],
+                
 
               }}
               whileHover={{ scale: [1.112,1,1.112,1,1.112,1,1.112,1,],

@@ -112,8 +112,8 @@ function NewMenu({Type, Clicked, id , name, price}) {
          
         { foods.filter(food => food.data().Type === selected).map((selected) => (
           <>
-                    <h2 className='hover:bg-yellow-500 active:scale-75 transition transform duration-1000 text-white' onClick={ () => setStaged(selected.data())} key={selected.data().id} onPointerOver={() => setPicked(true)}>{selected.data().name || <Skeleton />}</h2>
-                    <h2 key={selected.data().id}>{selected.data().price}</h2>
+                    <h2 className='hover:bg-yellow-500 active:scale-75 border-rounded-md transition transform duration-1000 text-white' onClick={ () => setStaged(selected.data())} key={selected.data().id} onPointerOver={() => setPicked(true)}>{selected.data().name || <Skeleton />}</h2>
+                    <h2 key={selected.data().id} className='text-white'>{selected.data().price}</h2>
                     <button onClick={() => addToCart(selected.data())}className='bg-black text-white p-2'>Add</button>
                    
 

@@ -21,12 +21,12 @@ function ShoppingCart() {
   
 
   return (
-    <div className='flex relative h-screen text-red bg-white items-center max-w-full overflow-hidden'>
+    <div className='flex bg-yellow-600 bg-opacity-60 z-10relative h-screen text-red  items-center max-w-full overflow-hidden'>
       {
       cart.map((food) => (
         <>
         <div className='h-20  items-center grid  border-rounded px-8 hover:scale-105 transition-all duration-1000 transform'>
-
+       
         <div className='bg-white'>
           <h1 className='py-2 space-x-4 bg-red-500 opacity-90 bg-blur '>{food.name}</h1>
           <img className='p-4  border rounded-lg  hover:scale-105 transition transform duration-500  h-48 w-48' src={food.image} />

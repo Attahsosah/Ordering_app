@@ -1,8 +1,18 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Swiper, SwiperSlide,Autoplay } from "swiper/react";
+
+// Import Swiper styles
+
+import "swiper/css/effect-cards";
+
+// import "./styles.css";
+
+// import required modules
+import { EffectCards } from "swiper"
 
 
 const { motion } = require("framer-motion");
@@ -59,7 +69,7 @@ function Items() {
             duration:2.5,
           }}
           whileInView={{opacity:1, y:0}}
-         className="lg:mx-28 bg-no-repeat">
+         className="lg:mx-28 bg-no-repeat bg-blur bg-opacity-50 p-2 z-50 bg-yellow-600  ">
 
             <h1 className=" pl-11 font-bold  text-yellow-700 items-center justify-center text-9xl py-10 font-Koulen bg-bg10" >The best food in town</h1>
             </motion.div>
@@ -67,11 +77,30 @@ function Items() {
             <h1 className="  pl-11 font-bold text-orange-800 items-center justify-center text-9xl py-10 font-Koulen bg-bg11 rounded-full" >The best foosa in town</h1>
             </div> */}
             </Carousel>
-        <div className="  pl-24  mb-4 md:flex space-x-4 pb-0 ">
+        <div className="  pl-24  mb-4 md:flex space-x-4 pb-0 bg-opacity-20 bg-slate-500 ">
             <h1 className="text-gray-200 text-2xl font-bold" data-aos='fade-in' data-aos-duration='3000'>Our offers</h1>
             <div className='bg-yellow-400 w-[0.02em] hover:w-[0.05em]' data-aos='fade-in' data-aos-duration='4000'/>
         </div>
-        <div className="">
+
+        <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        autoplay={true}
+        interval={1000}
+
+        modules={[EffectCards]}
+        className="mySwiper  overflow-hidden overflow-x-scroll w-[70%] py-10"
+        data-aos='fade-right'
+      >
+        <SwiperSlide className="bg-bg6  hover:scale-150 text-gray-400 font-Koulen">The Slider</SwiperSlide>
+        <SwiperSlide  className="bg-Denim bg-cover font-Koulen bg-opacity-30">Denim Delight</SwiperSlide>
+        <SwiperSlide className="bg-Cream bg-cover font-Koulen">Cream Dream</SwiperSlide>
+        <SwiperSlide className="bg-Cafe bg-cover font-Koulen">The CafÉ Affair</SwiperSlide>
+        <SwiperSlide className="">Slide 5</SwiperSlide>
+        <SwiperSlide className="">Slide 6</SwiperSlide>
+        
+      </Swiper>
+        {/* <div className="">
         <div className= {scrolled ? " flex space-x-2 mx-auto scroll-mx-44 transition-all transform duration-200 ease-in-out   overflow-hidden items-center pt-4 pl-7 overflow-x-scroll w-[70%] " : "flex  items-center pt-4 pl-7 overflow-x-scroll w-[1200px] " } data-aos='fade-right' data-aos- >
 
             <div className="hover:scale-110  hover:w-96 w-96 hover:z-30 items-center border-r-2 border-gray-700 h-96  rounded-lg bg-bg6  bg-cover transition transform duration-1000 ease-out bg-transparent hover:cursor-pointer">
@@ -101,7 +130,7 @@ function Items() {
                
             </div>
         
-        </div>
+        </div> */}
         </div>
 
         
