@@ -1,7 +1,7 @@
 import { ColorProvider } from '../components/context/ColorContext';
 import Layout from '../components/Layout'
 import '../styles/globals.css'
-
+import "swiper/css/bundle";
 
 const { motion } = require("framer-motion");
 

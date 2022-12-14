@@ -3,22 +3,23 @@ import { Carousel } from 'react-responsive-carousel';
 import { useEffect, useState,useRef } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Swiper, SwiperSlide,Autoplay } from "swiper/react";
-
-// Import Swiper styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css/autoplay';
+// import Swiper styles
 
 import "swiper/css/effect-cards";
 
 // import "./styles.css";
 
 // import required modules
-import { EffectCards } from "swiper"
+import { EffectCards, Autoplay, FreeMode } from "swiper"
 
 
 const { motion } = require("framer-motion");
 
 function Items() {
     const [scrolled, setScrolled] = useState(false)
+    
 
     const scrollChange = () => {
         if (window.scrollY > 60){
@@ -41,9 +42,11 @@ function Items() {
     return (
         
 
-        <div className="items-center z-40 shadow-lg     overflow-x-auto ">
+        <div className="items-center z-40 shadow-lg gradient from-black bg-gradient-to-b to-zinc-800   overflow-x-auto ">
             <Carousel
+        
         autoPlay={true}
+        delay={1000}
         autoFocus={true}
         emulateTouch={true}
         transitionTime={1000}
@@ -52,7 +55,7 @@ function Items() {
         infiniteLoop={true}
         swipeAnimationHandler={true}
         swipeable={true}
-        interval={6000}
+        
 
         className="z-10  lg:mx-44 bg-bg13  mb-28 "
        
@@ -77,29 +80,114 @@ function Items() {
             <h1 className="  pl-11 font-bold text-orange-800 items-center justify-center text-9xl py-10 font-Koulen bg-bg11 rounded-full" >The best foosa in town</h1>
             </div> */}
             </Carousel>
-        <div className="  pl-24  mb-4 md:flex space-x-4 pb-0 bg-opacity-20 bg-slate-500 ">
+        <div className="  pl-24  mb-4 md:flex space-x-4 pb-0 bg-opacity-20 ">
             <h1 className="text-gray-200 text-2xl font-bold" data-aos='fade-in' data-aos-duration='3000'>Our offers</h1>
             <div className='bg-yellow-400 w-[0.02em] hover:w-[0.05em]' data-aos='fade-in' data-aos-duration='4000'/>
         </div>
+        <div className="flex">
+            <Swiper
+            effect={"cards"}
+            
+            grabCursor={true}
+            autoplay={{
+                disableOnInteraction:false,
+                pauseOnMouseEnter:false,
+                
+                delay:3000}}
+            freeMode={{
+                enabled:true,
+                sticky:true,
+                momentum:true,
+                momentumBounce:true,
+                
+            }}
+            lazy={{
+                checkInView:true,
+                loadOnTransitionStart:true,
+            }}
+           
 
+            modules={[EffectCards, Autoplay, FreeMode]}
+            className="mySwiper  overflow-hidden overflow-x-scroll w-[70%] py-10 z-20 "
+            data-aos='fade-right'
+        >
+            <SwiperSlide className="bg-bg6  hover:scale-150 text-gray-400 font-Koulen">The Slider</SwiperSlide>
+            <SwiperSlide  className="bg-Denim bg-cover font-Koulen bg-opacity-30">Denim Delight</SwiperSlide>
+            <SwiperSlide className="bg-Cream bg-cover font-Koulen">Cream Dream</SwiperSlide>
+            <SwiperSlide className="bg-Cafe bg-cover font-Koulen">The CafÉ Affair</SwiperSlide>
+            {/* <SwiperSlide className="">Slide 5</SwiperSlide>
+            <SwiperSlide className="">Slide 6</SwiperSlide> */}
+            
+        </Swiper>
         <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        autoplay={true}
-        interval={1000}
+            effect={"cards"}
+            
+            grabCursor={true}
+            autoplay={{
+                disableOnInteraction:false,
+                pauseOnMouseEnter:false,
+                
+                delay:5000}}
+            freeMode={{
+                enabled:true,
+                sticky:true,
+                momentum:true,
+                momentumBounce:true,
+                
+            }}
+            lazy={{
+                checkInView:true,
+                loadOnTransitionStart:true,
+            }}
+           
 
-        modules={[EffectCards]}
-        className="mySwiper  overflow-hidden overflow-x-scroll w-[70%] py-10"
-        data-aos='fade-right'
-      >
-        <SwiperSlide className="bg-bg6  hover:scale-150 text-gray-400 font-Koulen">The Slider</SwiperSlide>
-        <SwiperSlide  className="bg-Denim bg-cover font-Koulen bg-opacity-30">Denim Delight</SwiperSlide>
-        <SwiperSlide className="bg-Cream bg-cover font-Koulen">Cream Dream</SwiperSlide>
-        <SwiperSlide className="bg-Cafe bg-cover font-Koulen">The CafÉ Affair</SwiperSlide>
-        <SwiperSlide className="">Slide 5</SwiperSlide>
-        <SwiperSlide className="">Slide 6</SwiperSlide>
-        
-      </Swiper>
+            modules={[EffectCards, Autoplay, FreeMode]}
+            className="mySwiper  overflow-hidden overflow-x-scroll w-[70%] py-10 z-20 "
+            data-aos='fade-right'
+        >
+            <SwiperSlide className="bg-cake  hover:scale-150 text-gray-400 font-Koulen">The Slider</SwiperSlide>
+            <SwiperSlide  className="bg-dip bg-cover font-Koulen bg-opacity-30">Denim Delight</SwiperSlide>
+            <SwiperSlide className="bg-sandwich bg-cover font-Koulen">Cream Dream</SwiperSlide>
+            <SwiperSlide className="bg-borito bg-cover font-Koulen">The CafÉ Affair</SwiperSlide>
+            {/* <SwiperSlide className="">Slide 5</SwiperSlide>
+            <SwiperSlide className="">Slide 6</SwiperSlide> */}
+            
+        </Swiper>
+        <Swiper
+            effect={"cards"}
+            
+            grabCursor={true}
+            autoplay={{
+                disableOnInteraction:false,
+                pauseOnMouseEnter:false,
+                
+                delay:4000}}
+            freeMode={{
+                enabled:true,
+                sticky:true,
+                momentum:true,
+                momentumBounce:true,
+                
+            }}
+            lazy={{
+                checkInView:true,
+                loadOnTransitionStart:true,
+            }}
+           
+
+            modules={[EffectCards, Autoplay, FreeMode]}
+            className="mySwiper  overflow-hidden overflow-x-scroll w-[70%] py-10 z-20 "
+            data-aos='fade-right'
+        >
+            <SwiperSlide className="bg-bg6  hover:scale-150 text-gray-400 font-Koulen">The Slider</SwiperSlide>
+            <SwiperSlide  className="bg-Denim bg-cover font-Koulen bg-opacity-30">Denim Delight</SwiperSlide>
+            <SwiperSlide className="bg-Cream bg-cover font-Koulen">Cream Dream</SwiperSlide>
+            <SwiperSlide className="bg-Cafe bg-cover font-Koulen">The CafÉ Affair</SwiperSlide>
+            {/* <SwiperSlide className="">Slide 5</SwiperSlide>
+            <SwiperSlide className="">Slide 6</SwiperSlide> */}
+            
+        </Swiper>
+      </div>
         {/* <div className="">
         <div className= {scrolled ? " flex space-x-2 mx-auto scroll-mx-44 transition-all transform duration-200 ease-in-out   overflow-hidden items-center pt-4 pl-7 overflow-x-scroll w-[70%] " : "flex  items-center pt-4 pl-7 overflow-x-scroll w-[1200px] " } data-aos='fade-right' data-aos- >
 

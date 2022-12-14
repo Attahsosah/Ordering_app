@@ -11,6 +11,13 @@ module.exports = {
       
       backgroundImage: {
         'bg1': "url('https://theburgerspriest.com/wp-content/uploads/2019/06/Burgers_Icon-min.jpg')",
+       
+        'strawberry':"url(' https://cdn.discordapp.com/attachments/800718490750418967/1052695962486833172/pexels-ibrahim-hakk-ucman-3342301.jpg')",
+        'borito':"url('https://cdn.discordapp.com/attachments/800718490750418967/1052695962814001192/pexels-nishant-aneja-2955819.jpg')",
+        'sandwich':"url('https://cdn.discordapp.com/attachments/800718490750418967/1052695963036295249/pexels-erin-wang-1647163.jpg')",
+        'cake':"url('https://cdn.discordapp.com/attachments/800718490750418967/1052695963338276904/pexels-jonas-mohamadi-3049426.jpg')",
+        'sushi':"url('https://cdn.discordapp.com/attachments/800718490750418967/1052695963610919002/pexels-pixabay-357756.jpg')",
+        'dip':"url('https://cdn.discordapp.com/attachments/800718490750418967/1052695964663676998/pexels-valeria-boltneva-1893555.jpg')",
         'Denim': "url('https://cdn.discordapp.com/attachments/800718490750418967/1052575070972813393/pexels-valeria-boltneva-1199959.jpg')",
         'Cream': "url('https://cdn.discordapp.com/attachments/800718490750418967/1052575071220273183/pexels-kristina-paukshtite-1146758.jpg')",
         'Cafe': "url('https://cdn.discordapp.com/attachments/800718490750418967/1052575071409012836/pexels-elle-hughes-2101150.jpg')",

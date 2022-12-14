@@ -5,6 +5,7 @@ import styles from '../styles/Home.module.css'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "swiper/css/bundle";
+import SwiperCore, { Autoplay } from 'swiper';
 
 export default function Home() {
   return (
