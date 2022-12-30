@@ -84,7 +84,7 @@ function Items() {
             <h1 className="text-gray-200 text-2xl font-bold" data-aos='fade-in' data-aos-duration='3000'>Our offers</h1>
             <div className='bg-yellow-400 w-[0.02em] hover:w-[0.05em]' data-aos='fade-in' data-aos-duration='4000'/>
         </div>
-        <div className="flex">
+        <div className="xs:grid md:flex space-y-5">
             <Swiper
             effect={"cards"}
             
@@ -161,7 +161,7 @@ function Items() {
                 disableOnInteraction:false,
                 pauseOnMouseEnter:false,
                 
-                delay:4000}}
+                delay:3300}}
             freeMode={{
                 enabled:true,
                 sticky:true,

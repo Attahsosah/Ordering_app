@@ -8,7 +8,7 @@ const { motion } = require("framer-motion");
 function MyApp({ Component, pageProps, router}) {
   return (
     
-  <ColorProvider>
+  <ColorProvider className="overflow-hidden items-center">
     
     <motion.div 
     key={router.route}

@@ -21,7 +21,7 @@ function ShoppingCart() {
   
 
   return (
-    <div className='flex bg-yellow-600 bg-opacity-60 z-10relative h-screen text-red  items-center max-w-full overflow-hidden'>
+    <div className='flex bg-yellow-800 mx-auto bg-blur  bg-opacity-60 z-10 items-center relative h-screen text-red  items-center max-w-full overflow-hidden'>
       {
       cart.map((food) => (
         <>
@@ -29,7 +29,7 @@ function ShoppingCart() {
        
         <div className='bg-white'>
           <h1 className='py-2 space-x-4 bg-red-500 opacity-90 bg-blur '>{food.name}</h1>
-          <img className='p-4  border rounded-lg  hover:scale-105 transition transform duration-500  h-48 w-48' src={food.image} />
+          <img className='p-4  border rounded-lg  hover:scale-105 hover:border-none transition transform duration-500  h-48 w-48' src={food.image} />
           <h1 className='py-2 bg-yellow-700'>$ {food.price}</h1>
           {/* <button onClick={() => removeFromCart(selected.data())} className="bg-blue-500 p-2 m-2  px-8 rounded-lg hover:bottom-9">Remove Item</button> */}
         </div>

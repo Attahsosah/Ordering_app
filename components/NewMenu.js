@@ -78,7 +78,7 @@ function NewMenu({Type, Clicked, id , name, price}) {
 
   return (
     <div className=  '   bg-bg4 bg-no-repeat bg-cover bg-fixed '>
-      <div className='flex space-x-8 pt-7 bg-black bg-opacity-75 '>
+      <div className='lg:flex mx-auto space-x-8 pt-7 bg-black bg-opacity-75 '>
       <div className='pl-10 mt-16'>
               <div className='flex space-x-4 '>
               <h1 className=' text-2xl font-serif font-bold text-white ' >The Menu</h1>
@@ -135,7 +135,7 @@ function NewMenu({Type, Clicked, id , name, price}) {
           { foods.filter(food => food.data().Type === selected).map((selected) => (
           <>
           <div className=''>
-                        <img className='p-4  rounded-lg  hover:scale-105 transition transform duration-500  h-48 w-48' src={selected.data().image} />
+                        <img className=' h-1/2 w-1/2 p-4  rounded-lg  hover:scale-105 transition transform duration-500  lg:h-48 lg:w-48' src={selected.data().image} />
 
                       </div>
                     
