@@ -86,7 +86,7 @@ function Items() {
         </div>
         <div className="xs:grid md:flex space-y-5">
             <Swiper
-            effect={"cards"}
+            effect={"fade"}
             
             grabCursor={true}
             autoplay={{
@@ -154,7 +154,7 @@ function Items() {
             
         </Swiper>
         <Swiper
-            effect={"cards"}
+            effect={"fade"}
             
             grabCursor={true}
             autoplay={{
