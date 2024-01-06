@@ -34,7 +34,7 @@ function Admin() {
             onChange={(e) => setType(e.target.value)}
             placeholder="Type here"
           />
-          <h1 className="p-4 text-center">Name of Food</h1>
+          <h1 className="p-4 text-center">Name of Foods</h1>
           <input
             className="bg-transparent border border-yellow-600 rounded-md pl-4 hover:scale-105 transition-transform duration-1000"
             type="text"
