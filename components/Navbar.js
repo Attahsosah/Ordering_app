@@ -174,7 +174,7 @@ function Navbar() {
 
                      className="cursor-pointer hover:scale-105 transition ease-out">Our Menu</motion.li>
                      </Link>
-                    <li className="cursor-pointer hover:scale-105 ease-out">Blog</li>
+                    <li className="cursor-pointer hover:scale-105 ease-out">The Blog</li>
                     <li className="cursor-pointer hover:scale-105 ease-out">Contacts</li>
 
                 </ul>
