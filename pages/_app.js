@@ -1,5 +1,6 @@
 import { ColorProvider } from '../components/context/ColorContext';
 import Layout from '../components/Layout'
+import LoadingScreen from '../components/LoadingScreen';
 import '../styles/globals.css'
 import "swiper/css/bundle";
 
@@ -7,7 +8,7 @@ const { motion } = require("framer-motion");
 
 function MyApp({ Component, pageProps, router}) {
   return (
-    
+  
   <ColorProvider className="overflow-hidden items-center">
     
     <motion.div 
@@ -27,7 +28,9 @@ function MyApp({ Component, pageProps, router}) {
       }
     }}
     >
+       <LoadingScreen>
       <Component {...pageProps} />
+      </LoadingScreen>
       </motion.div>
     
   </ColorProvider>
